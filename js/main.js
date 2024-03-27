@@ -68,34 +68,7 @@ tetrahedron.scale.y = 5;
 tetrahedron.scale.z = 5;
 
 ////////MODELS/////////////////////////////
-// Add reflection model
-var reflection;
-var mixer; // Three.JS AnimationMixer
-var reflect_anim_SPIN; // Animation SPIN
-const gltfLoader2 = new GLTFLoader();
-gltfLoader2.load('../media/models/reflectionModel.glb', function(gltf){
-    reflection = gltf.scene;
-    reflection.scale.set(1.5,1.5,1.5);
-    reflection.rotation.x = Math.PI/3;
-    reflection.rotation.y = Math.PI/2;
-    reflection.rotation.z = Math.PI/1.95;
-    reflection.position.set(0,20,0);
-    
-    // Add metal material
-    var material = new THREE.MeshStandardMaterial({color: 0xffffff, metalness: 1, roughness: 0});
-    reflection.traverse(function(child){
-        if(child.isMesh){
-            child.material = material;
-        }
-    });
 
-    scene.add(reflection);
-
-    //Animation Mixer
-    mixer = new THREE.AnimationMixer(reflection);
-    reflect_anim_SPIN = gltf.animations[0]; // First animation
-    mixer.clipAction( reflect_anim_SPIN ).play();
-});
 
 // Add floor plane
 const geometryPlane = new THREE.PlaneGeometry( 1, 1 );
