@@ -82,7 +82,7 @@ gltfLoader2.load('../media/models/reflectionModel.glb', function(gltf){
     reflection.position.set(0,20,0);
     
     // Add metal material
-    var material = new THREE.MeshStandardMaterial({color: 0xffffff, metalness: 1, roughness: 0});
+    var mat3erial = new THREE.MeshStandardMaterial({color: 0xffffff, metalness: 1, roughness: 0});
     reflection.traverse(function(child){
         if(child.isMesh){
             child.material = material;
@@ -99,7 +99,7 @@ gltfLoader2.load('../media/models/reflectionModel.glb', function(gltf){
 
 // Add floor plane
 const geometryPlane = new THREE.PlaneGeometry( 1, 1 );
-const materialPlane = new THREE.MeshLambertMaterial( {color: "#000000", side: THREE.DoubleSide, metalness: 0.9, roughness: 0} );
+const materialPlane = new THREE.MeshLambertMaterial( {color: "#000000", side: THREE.DoubleSide} );
 const plane = new THREE.Mesh( geometryPlane, materialPlane);
 scene.add( plane );
 
