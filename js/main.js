@@ -73,7 +73,7 @@ var reflection;
 var mixer; // Three.JS AnimationMixer
 var reflect_anim_SPIN; // Animation SPIN
 const gltfLoader2 = new GLTFLoader();
-gltfLoader2.load('../media/models/newReflectionModel.glb', function(gltf){
+gltfLoader2.load('media/models/newReflectionModel.glb', function(gltf){
     reflection = gltf.scene;
     reflection.scale.set(1.5,1.5,1.5);
     reflection.rotation.x = Math.PI/3;
