@@ -8,7 +8,7 @@ var height = window.innerHeight;
 // Set up the scene
 var scene = new THREE.Scene();
 
-////////////CAMERA////////////////////////////////
+////////////CAMERA/////////////////////////////
 // Add a camera
 var camera = new THREE.PerspectiveCamera(75,width/height,0.1,1000);
 camera.position.z = 0;
