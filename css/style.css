@@ -1,0 +1,33 @@
+body{
+    margin:0;
+}
+canvas{
+    display:block;
+}
+
+#custom-cursor{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-image: url('../media/images/noun-cursor-1010278.png');
+    background-size: cover;
+    pointer-events: none;
+}
+
+#hello{
+    position:absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-15%);
+    color: rgba(11, 0, 73, 0.715);
+}
+
+@font-face {
+    font-family: 'KodeMono';
+    src: url('../media/fonts/KodeMono.ttf');
+}
+
+h1{
+    font-family: 'KodeMono';
+    font-size: 50px;
+}
